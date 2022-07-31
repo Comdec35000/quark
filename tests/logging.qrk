@@ -1,0 +1,8 @@
+(import "std:prelude.qrk")
+(import "std:utils/logger.qrk")
+
+(defn main [] {
+  (info "This is an info")
+  (error "This is an error")
+  (success "This is a success")
+})

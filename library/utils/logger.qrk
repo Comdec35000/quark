@@ -1,0 +1,26 @@
+; Utils should not be added to prelude.qrk as long as they're optional
+(import "std:modules/io.qrk")
+
+(defn info [msg] {
+  (putStr (black_bright "["))
+  (putStr (bold (blue "INFO")))
+  (putStr (black_bright "] : "))
+  (putStr (blue_bright msg))
+  (putStr "\n")
+})
+
+(defn error [msg] {
+  (putStr (black_bright "["))
+  (putStr (bold (red "ERROR")))
+  (putStr (black_bright "] : "))
+  (putStr (red_bright msg))
+  (putStr "\n")
+})
+
+(defn success [msg] {
+  (putStr (black_bright "["))
+  (putStr (bold (green "SUCCESS")))
+  (putStr (black_bright "] : "))
+  (putStr (green_bright msg))
+  (putStr "\n")
+})
