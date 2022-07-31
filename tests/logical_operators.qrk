@@ -1,0 +1,10 @@
+(import "std:prelude.qrk")
+
+(defn main [] {
+  (print (to_string (< 1 2)))
+  (print (to_string (> 1 2)))
+  
+  (if (&& (< 1 2) (> 2 1)) 
+    (print "The two side are true") 
+    (print "At least one of the two sides is false"))})
+

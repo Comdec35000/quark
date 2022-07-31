@@ -10,14 +10,11 @@
 (declare (/ a) (-> a a a))
 (defn / [a b] (binary a "/" b))
 
-(declare (= a) (-> a a bool))
-(defn = [x y] (binary x "===" y))
+(declare (< a) (-> a a bool))
+(defn < [a b] (binary a "<" b))
 
-(declare (! a) (-> a bool))
-(defn ! [x] (call "!" x))
+(declare (> a) (-> a a bool))
+(defn > [a b] (binary a ">" b))
 
 (defn . [f g]
   (fn [x] (f (g x))))
-
-(declare (/= a) (-> a a bool))
-(defn /= [x] (. ! (= x)))
